@@ -59,7 +59,19 @@ The parameters can be extracted from the Release page URL: `https://install.appc
 
 ### App Update {#app-store-mac-app-store-app-update}
 
-<Route author="cielpy" example="/appstore/update/us/id697846300" path="/appstore/update/:country/:id" paramsDesc={['App Store Country, obtain from the app URL `https://apps.apple.com/us/app/reeder-3/id697846300?mt=8`, in this case, `us`', 'App Store app id, obtain from the app URL `https://apps.apple.com/us/app/reeder-3/id697846300?mt=8`, in this case, `id697846300`']} />
+<Route author="EkkoG nczitzk" example="/apple/apps/update/us/id408709785" path="/apple/apps/update/:country/:id/:platform?" paramsDesc={['App Store Country, obtain from the app URL, see below', 'App id, obtain from the app URL', 'App Platform, see below, all by default']} radar="1" rssbud="1">
+
+| All | iOS | macOS | tvOS |
+| --- | --- | ----- | ---- |
+|     | iOS | macOS | tvOS |
+
+:::tip
+
+For example, the URL of [GarageBand](https://apps.apple.com/us/app/messages/id408709785) in the App Store is `https://apps.apple.com/us/app/messages/id408709785`. In this case, the `App Store Country` parameter for the route is `us`, and the `App id` parameter is `id1146560473`. So the route should be [`/apple/apps/update/us/id408709785`](https://rsshub.app/apple/apps/update/us/id408709785).
+
+:::
+
+</Route>
 
 ### Price Drop {#app-store-mac-app-store-price-drop}
 
@@ -159,7 +171,7 @@ Language
 
 ### 更新日志 {#bugly-sdk-geng-xin-ri-zhi}
 
-<Route author="cielpy" example="/bugly/changelog/1" path="/bugly/changelog/:platform" paramsDesc={['平台类型, 必选, 1 为 Android, 2 为 iOS']}/>
+<Route author="EkkoG" example="/bugly/changelog/1" path="/bugly/changelog/:platform" paramsDesc={['平台类型, 必选, 1 为 Android, 2 为 iOS']}/>
 
 ## Cent Browser {#cent-browser}
 
@@ -247,7 +259,7 @@ For example: `https://www.curseforge.com/sc2/assets/taylor-mouses-stuff/files` t
 
 :::caution
 
-The owner of the official image fills in the library, for example: <https://rsshub.app/dockerhub/build/library/mysql>
+The owner of the official image fills in the library, for example: [https://rsshub.app/dockerhub/build/library/mysql](https://rsshub.app/dockerhub/build/library/mysql)
 
 :::
 
@@ -259,7 +271,7 @@ The owner of the official image fills in the library, for example: <https://rssh
 
 :::caution
 
-Use `library` as the `owner` for official images, such as <https://rsshub.app/dockerhub/tag/library/mysql>
+Use `library` as the `owner` for official images, such as [https://rsshub.app/dockerhub/tag/library/mysql](https://rsshub.app/dockerhub/tag/library/mysql)
 
 :::
 
@@ -295,7 +307,7 @@ Language
 
 ### 更新 {#fir.im-ying-yong-geng-xin}
 
-<Route author="cielpy" example="/fir/update/xcz" path="/fir/update/:id" paramsDesc={['fir app id, 必选, 如 fir 生成的链接地址为 https://fir.im/xcz, 则 id 为 `xcz`']}/>
+<Route author="EkkoG" example="/fir/update/xcz" path="/fir/update/:id" paramsDesc={['fir app id, 必选, 如 fir 生成的链接地址为 https://fir.im/xcz, 则 id 为 `xcz`']}/>
 
 ## Firefox {#firefox}
 
@@ -353,9 +365,9 @@ Language
 
 :::caution
 
-1.  Open <https://ifi-audio.com/download-hub> and the Network panel
+1.  Open [https://ifi-audio.com/download-hub](https://ifi-audio.com/download-hub) and the Network panel
 2.  Select the device and the corresponding serial number in the website and click Search
-3.  Find the last request named <https://ifi-audio.com/wp-admin/admin-ajax.php> in the Network panel, find out the val and id in the Payload panel, and fill in the url
+3.  Find the last request named `https://ifi-audio.com/wp-admin/admin-ajax.php` in the Network panel, find out the val and id in the Payload panel, and fill in the url
 
 :::
 
@@ -382,7 +394,7 @@ Language
 :::caution
 
 Logseq 开发团队已经放弃了 [旧网站](https://logseq.com/blog)。
-请使用 <https://github.com/logseq/logseq/releases.atom> 代替。
+请使用 `https://github.com/logseq/logseq/releases.atom` 代替。
 
 :::
 
@@ -463,7 +475,7 @@ Logseq 开发团队已经放弃了 [旧网站](https://logseq.com/blog)。
 
 ### Changelog {#nvidia-web-driver-changelog}
 
-<Route author="cielpy" example="/nvidia/webdriverupdate" path="/nvidia/webdriverupdate"/>
+<Route author="EkkoG" example="/nvidia/webdriverupdate" path="/nvidia/webdriverupdate"/>
 
 ## O&O Software {#o-o-software}
 
@@ -638,6 +650,16 @@ Open `https://www.sony.com/electronics/support` and search for the corresponding
 
 </Route>
 
+## SourceForge {#sourceforge}
+
+<Route author="JimenezLi" example="/sourceforge/topic=artificial-intelligence&os=windows" path="/sourceforge/:routeParams?" paramsDesc={['route params, see below']}>
+
+For some URL like [https://sourceforge.net/directory/artificial-intelligence/windows/](https://sourceforge.net/directory/artificial-intelligence/windows/), it is equal to [https://sourceforge.net/directory/?topic=artificial-intelligence&os=windows"](https://sourceforge.net/directory/?topic=artificial-intelligence&os=windows), thus subscribing to `/sourceforge/topic=artificial-intelligence&os=windows`.
+
+URL params can duplicate, such as `/sourceforge/topic=artificial-intelligence&os=windows&os=linux`.
+
+</Route>
+
 ## Thunderbird {#thunderbird}
 
 ### Changelog {#thunderbird-changelog}
@@ -769,7 +791,7 @@ Language
 
 ### 更新日志 {#teng-xun-yun-yi-dong-zhi-bo-sdk-geng-xin-ri-zhi}
 
-<Route author="cielpy" example="/qcloud/mlvb/changelog" path="/qcloud/mlvb/changelog"/>
+<Route author="EkkoG" example="/qcloud/mlvb/changelog" path="/qcloud/mlvb/changelog"/>
 
 ## 小米应用商店 {#xiao-mi-ying-yong-shang-dian}
 
